@@ -130,7 +130,7 @@
                                     <!--Author (nop Task)-->
                                     @if ((!string.IsNullOrWhiteSpace(Model.Author) && Model.ShowAuthor))
                                     {
-                                        <div class="gtin" @(string.IsNullOrWhiteSpace(Model.Author) ? Html.Raw("style=\"display:none\"") : null)>
+                                        <div class="Author" @(string.IsNullOrWhiteSpace(Model.Author) ? Html.Raw("style=\"display:none\"") : null)>
                                             <span class="label">@T("Products.Author"):</span>
                                             <span class="value" id="Author-@Model.Id">@Model.Author</span>
                                         </div>
