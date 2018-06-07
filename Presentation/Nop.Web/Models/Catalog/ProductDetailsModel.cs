@@ -52,7 +52,8 @@ namespace Nop.Web.Models.Catalog
 
         public bool ShowGtin { get; set; }
         public string Gtin { get; set; }
-
+        public bool ShowAuthor { get; set; }
+        public string Author { get; set; }
         public bool ShowVendor { get; set; }
         public VendorBriefInfoModel VendorModel { get; set; }
 

@@ -612,6 +612,15 @@
                             @Html.ValidationMessageFor(model => model.Gtin)
                         </div>
                     </div>
+                    <div class="form-group @(Model.ProductEditorSettingsModel.Author ? null : "advanced-setting")">
+                        <div class="col-md-3">
+                            @Html.NopLabelFor(model => model.Author)
+                        </div>
+                        <div class="col-md-9">
+                            @Html.NopEditorFor(model => model.Author)
+                            @Html.ValidationMessageFor(model => model.Author)
+                        </div>
+                    </div>
                     <div class="form-group @(Model.ProductEditorSettingsModel.ManufacturerPartNumber ? null : "advanced-setting")">
                         <div class="col-md-3">
                             @Html.NopLabelFor(model => model.ManufacturerPartNumber)

@@ -46,6 +46,8 @@ namespace Nop.Admin.Models.Settings
 
         [NopResourceDisplayName("Admin.Configuration.Settings.ProductEditor.GTIN")]
         public bool GTIN { get; set; }
+        [NopResourceDisplayName("Admin.Configuration.Settings.ProductEditor.Author")]
+        public bool Author { get; set; }
 
         [NopResourceDisplayName("Admin.Configuration.Settings.ProductEditor.ProductCost")]
         public bool ProductCost { get; set; }

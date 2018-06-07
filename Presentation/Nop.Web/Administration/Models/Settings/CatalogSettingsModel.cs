@@ -32,6 +32,9 @@ namespace Nop.Admin.Models.Settings
         [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowGtin")]
         public bool ShowGtin { get; set; }
         public bool ShowGtin_OverrideForStore { get; set; }
+        [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowAuthor")]
+        public bool ShowAuthor { get; set; }
+        public bool ShowAuthor_OverrideForStore { get; set; }
 
         [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.ShowFreeShippingNotification")]
         public bool ShowFreeShippingNotification { get; set; }

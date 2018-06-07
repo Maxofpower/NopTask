@@ -813,6 +813,7 @@ namespace Nop.Admin.Infrastructure.Mapper
                     .ForMember(dest => dest.ShowSkuOnCatalogPages_OverrideForStore, mo => mo.Ignore())
                     .ForMember(dest => dest.ShowManufacturerPartNumber_OverrideForStore, mo => mo.Ignore())
                     .ForMember(dest => dest.ShowGtin_OverrideForStore, mo => mo.Ignore())
+                    .ForMember(dest => dest.ShowAuthor_OverrideForStore, mo => mo.Ignore())
                     .ForMember(dest => dest.ShowFreeShippingNotification_OverrideForStore, mo => mo.Ignore())
                     .ForMember(dest => dest.AllowProductSorting_OverrideForStore, mo => mo.Ignore())
                     .ForMember(dest => dest.AllowProductViewModeChanging_OverrideForStore, mo => mo.Ignore())

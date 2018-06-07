@@ -212,6 +212,7 @@ namespace Nop.Data.Tests
                 Sku = "sku 1",
                 ManufacturerPartNumber = "manufacturerPartNumber",
                 Gtin = "gtin 1",
+                Author="Author",
                 IsGiftCard = true,
                 GiftCardTypeId = 1,
                 OverriddenGiftCardAmount = 1,

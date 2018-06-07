@@ -518,6 +518,16 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-3">
+                                @Html.OverrideStoreCheckboxFor(model => model.ShowAuthor_OverrideForStore, model => model.ShowAuthor, Model.ActiveStoreScopeConfiguration)
+                                @Html.NopLabelFor(model => model.ShowAuthor)
+                            </div>
+                            <div class="col-md-9">
+                                @Html.NopEditorFor(model => model.ShowAuthor)
+                                @Html.ValidationMessageFor(model => model.ShowAuthor)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
                                 @Html.OverrideStoreCheckboxFor(model => model.ShowManufacturerPartNumber_OverrideForStore, model => model.ShowManufacturerPartNumber, Model.ActiveStoreScopeConfiguration)
                                 @Html.NopLabelFor(model => model.ShowManufacturerPartNumber)
                             </div>

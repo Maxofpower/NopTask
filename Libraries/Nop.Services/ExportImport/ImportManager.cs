@@ -711,6 +711,9 @@ namespace Nop.Services.ExportImport
                             case "Gtin":
                                 product.Gtin = property.StringValue;
                                 break;
+                            case "Author":
+                                product.Author = property.StringValue;
+                                break;
                             case "IsGiftCard":
                                 product.IsGiftCard = property.BooleanValue;
                                 break;

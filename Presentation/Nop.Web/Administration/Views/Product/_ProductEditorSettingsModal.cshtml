@@ -99,6 +99,15 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-10">
+                                                @Html.NopLabelFor(model => model.ProductEditorSettingsModel.Author)
+                                            </div>
+                                            <div class="col-md-2">
+                                                @Html.NopEditorFor(model => model.ProductEditorSettingsModel.Author)
+                                                @Html.ValidationMessageFor(model => model.ProductEditorSettingsModel.Author)
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
                                                 @Html.NopLabelFor(model => model.ProductEditorSettingsModel.ManufacturerPartNumber)
                                             </div>
                                             <div class="col-md-2">

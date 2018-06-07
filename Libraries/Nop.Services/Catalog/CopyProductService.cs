@@ -155,6 +155,7 @@ namespace Nop.Services.Catalog
                 Sku = newSku,
                 ManufacturerPartNumber = product.ManufacturerPartNumber,
                 Gtin = product.Gtin,
+                Author=product.Author,
                 IsGiftCard = product.IsGiftCard,
                 GiftCardType = product.GiftCardType,
                 OverriddenGiftCardAmount = product.OverriddenGiftCardAmount,

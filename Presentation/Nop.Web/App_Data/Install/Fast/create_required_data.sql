@@ -1957,6 +1957,8 @@ INSERT [dbo].[Setting] ([Id], [Name], [Value], [StoreId]) VALUES (503, N'display
 INSERT [dbo].[Setting] ([Id], [Name], [Value], [StoreId]) VALUES (504, N'displaydefaultmenuitemsettings.displayblogmenuitem', N'False', 0)
 INSERT [dbo].[Setting] ([Id], [Name], [Value], [StoreId]) VALUES (505, N'displaydefaultmenuitemsettings.displayforumsmenuitem', N'False', 0)
 INSERT [dbo].[Setting] ([Id], [Name], [Value], [StoreId]) VALUES (506, N'displaydefaultmenuitemsettings.displaycontactusmenuitem', N'False', 0)
+INSERT [dbo].[Setting] ([Id], [Name], [Value], [StoreId]) VALUES (507, N'producteditorsettings.author', N'False', 0)
+INSERT [dbo].[Setting] ([Id], [Name], [Value], [StoreId]) VALUES (508, N'catalogsettings.showauthor', N'False', 0)
 SET IDENTITY_INSERT [dbo].[Setting] OFF
 GO
 

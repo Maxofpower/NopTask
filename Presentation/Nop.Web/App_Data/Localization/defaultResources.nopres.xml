@@ -2769,8 +2769,14 @@
   <LocaleResource Name="Admin.Catalog.Products.Fields.GTIN">
     <Value>GTIN (global trade item number)</Value>
   </LocaleResource>
+ <LocaleResource Name="Admin.Catalog.Products.Fields.Author">
+    <Value>Author (Author of Art)</Value>
+  </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.Fields.GTIN.Hint">
     <Value>Enter global trade item number (GTIN). These identifiers include UPC (in North America), EAN (in Europe), JAN (in Japan), and ISBN (for books).</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.Fields.Author.Hint">
+    <Value>Author of Art (for books).</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.Fields.HasSampleDownload">
     <Value>Has sample download file</Value>
@@ -3362,6 +3368,12 @@
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.ProductAttributes.AttributeCombinations.Fields.GTIN.Hint">
     <Value>Enter global trade item number (GTIN). These identifiers include UPC (in North America), EAN (in Europe), JAN (in Japan), and ISBN (for books).</Value>
+  </LocaleResource>
+   <LocaleResource Name="Admin.Catalog.Products.ProductAttributes.AttributeCombinations.Fields.Author">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Catalog.Products.ProductAttributes.AttributeCombinations.Fields.Author.Hint">
+    <Value>Enter Author of This Product (for books).</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.ProductAttributes.AttributeCombinations.Fields.ManufacturerPartNumber">
     <Value>Manufacturer part number</Value>
@@ -5376,6 +5388,12 @@
   <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowGtin.Hint">
     <Value>Check to show GTIN in public store.</Value>
   </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowAuthor">
+    <Value>Show Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowAuthor.Hint">
+    <Value>Check to Show Author in public store.</Value>
+  </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.Catalog.ShowManufacturerPartNumber">
     <Value>Show manufacturer part number</Value>
   </LocaleResource>
@@ -7121,6 +7139,9 @@
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.ProductEditor.GTIN">
     <Value>GTIN (global trade item number)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.ProductEditor.Author">
+    <Value>Author</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.ProductEditor.Id">
     <Value>ID</Value>
@@ -15752,6 +15773,9 @@
   </LocaleResource>
   <LocaleResource Name="Products.GTIN">
     <Value>GTIN</Value>
+  </LocaleResource>
+  <LocaleResource Name="Products.Author">
+    <Value>Author</Value>
   </LocaleResource>
   <LocaleResource Name="Products.InclTaxSuffix">
     <Value>{0} incl tax</Value>

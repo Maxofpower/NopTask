@@ -49,6 +49,10 @@ namespace Nop.Core.Domain.Catalog
         public bool ShowGtin { get; set; }
 
         /// <summary>
+        /// Gets or sets a value indicating whether to display Author of a  product (book)
+        /// </summary>
+        public bool ShowAuthor { get; set; }
+        /// <summary>
         /// Gets or sets a value indicating whether "Free shipping" icon should be displayed for products
         /// </summary>
         public bool ShowFreeShippingNotification { get; set; }
