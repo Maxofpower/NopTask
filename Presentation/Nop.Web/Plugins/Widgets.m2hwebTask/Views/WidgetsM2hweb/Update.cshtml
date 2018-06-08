@@ -1,0 +1,24 @@
+﻿@using Nop.Plugin.Widgets.m2hwebTask.Models
+@model m2hwebModel
+@{
+    
+    Layout = "_AdminLayout.cshtml";
+}
+@using System
+@using Nop.Web.Framework
+@using Nop.Web.Framework.UI
+@using (Html.BeginForm("Update", "WidgetsM2hweb", FormMethod.Post))
+{
+    <div class="section-header">
+        <div class=" content-header clearfix">
+            <h1 class="pull-left">
+                @T("Edit.Widgets.m2hweb.Details") <small><i class="fa fa-arrow-circle-left"></i>@Html.ActionLink("(" + T("Admin.ContentManagement.Widgets.BackToList") + ")", "Configure", "WidgetsM2hweb")</small>
+            </h1>
+            <div class="pull-right">
+                <input type="submit" name="save" class="k-button btn bg-blue" value="@T("Admin.Common.Save")" />
+                <input type="submit" name="save-continue" class="k-button btn bg-blue" value="@T("Admin.Common.SaveContinue")" />
+            </div>
+        </div>
+    </div>
+    @Html.Partial("~/Plugins/Widgets.m2hwebTask/Views/WidgetsM2hweb/_CreateOrUpdate.cshtml", Model)
+}

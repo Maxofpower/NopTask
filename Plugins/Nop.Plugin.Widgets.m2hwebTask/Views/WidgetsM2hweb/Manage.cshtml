@@ -1,0 +1,168 @@
+﻿@using Nop.Plugin.Widgets.m2hwebTask.Models
+@model m2hwebModel
+
+@{
+    //Layout = "";
+    //  Layout = "_AdminLayout.cshtml";
+}
+
+
+@using Nop.Web.Framework
+@using Nop.Web.Framework.UI
+
+<div class="section-header content-header clearfix">
+    <h1 class="pull-left">
+        @T("widget.m2hweb")
+    </h1>
+    <div class="pull-right">
+        <a href="@Url.Action("Create", "WidgetsM2hweb")" class="k-button btn bg-blue"><i class="fa fa-plus-square"></i>@T("Admin.Common.AddNew")</a>
+       
+    </div>
+</div>
+<div class="content">
+    <div class="form-horizontal">
+        <div class="panel-group">
+            <div class="panel panel-default panel-search">
+                <div class="panel-body">
+                    <div class="row">                        
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                @Html.NopLabelFor(model => model.StoreId)
+                            </div>
+                            <div class="col-md-8">
+                                @Html.DropDownList("StoreId", Model.AvailableStores, new { @class="form-control"})
+                            </div>
+                        </div>
+                        <div class="form-group">                           
+                            <div class="col-md-8  col-md-offset-4">
+                                <button type="button" id="btnSearch" class="btn btn-primary btn-search"><i class="fa fa-search"></i>@T("Admin.Common.Search")</button>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div id="UnlimitedHtml-grid"></div>
+
+                    <script>
+    $(document).ready(function () {
+        $("#UnlimitedHtml-grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Html.Raw(Url.Action("m2hwebList", "WidgetsM2hweb"))",
+                        type: "POST",
+                        dataType: "json",
+                        data: additionalData
+                    },
+                    update: {
+                        url: "@Html.Raw(Url.Action("Update", "WidgetsM2hweb"))",
+                        type: "POST",
+                        dataType: "json"
+                    },
+                    destroy: {
+                        url: "@Html.Raw(Url.Action("Delete", "WidgetsM2hweb"))",
+                        type: "POST",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    errors: "Errors"
+
+                },
+                requestEnd: function (e) {
+                    if (e.type == "update") {
+                        this.read();
+                    }
+                },
+                error: function (e) {
+                    display_kendoui_grid_error(e);
+                    // Cancel the changes
+                    this.cancelChanges();
+                },
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true
+            },
+            pageable: {
+                refresh: true,
+                numeric: false,
+                previousNext: false,
+                info: false
+            },
+            scrollable: false,
+            columns: [
+            {
+                field: "StoreName",
+                title: "Store",
+                width: 70
+            },
+             {
+                 field: "Heading",
+                 title: "Widget Heading",
+                 width: 70
+             },
+             {
+                 field: "CustomDivHTML",
+                 title: "Content",
+                 width: 170
+             },
+            {
+                field: "Published",
+                title: "Published",
+                width: 50,
+                headerAttributes: { style: "text-align:center" },
+                attributes: { style: "text-align:center" },
+                template:'# if(Published) {# <i class="fa fa-check true-icon"></i> #} else {# <i class="fa fa-close false-icon"></i> #} #'
+            },
+             {
+                 field: "DisplayOrder",
+                 title: "Display Order",
+                 format: "{0:0}",
+                 width: 50
+             },
+            {
+                field: "Id",
+                title: "@T("Admin.Common.Edit")",
+                width: 70,
+                template: '<a class="btn btn-default" href="/WidgetsM2hweb/Update/#=Id#""><i class="fa fa-pencil"></i>@T("Admin.Common.Edit")</a> <a onclick="fndelete()" class="btn btn-default" href="/WidgetsM2hweb/Delete/#=Id#"><i class="fa fa-remove"></i>@T("Admin.Common.Delete")</a>'
+            }]
+    });
+
+
+    //search button
+    $('#btnSearch').click(function () {
+        //search
+        var grid = $('#categoryslider-grid').data('kendoGrid');
+        grid.dataSource.page(1); //new search. Set page size to 1
+        grid.dataSource.read();
+
+        return false;
+    });
+
+    });
+
+    function additionalData() {
+        return {
+            StoreId: $('#@Html.FieldIdFor(model => model.StoreId)').val() 
+        };
+    }
+    function fndelete() {
+        var confirmdelete = confirm("Do You Want to Delete");
+        if (confirmdelete)
+            return true;
+
+        return false;
+    }
+
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

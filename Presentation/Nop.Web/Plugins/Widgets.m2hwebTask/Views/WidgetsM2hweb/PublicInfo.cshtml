@@ -1,0 +1,23 @@
+﻿@model Nop.Plugin.Widgets.m2hwebTask.Models.PublicInfoModel
+@{
+    Layout = "";  
+}
+
+@using System
+@using Nop.Web.Framework
+@using Nop.Web.Framework.UI
+
+@if (Model.m2hwebModelList.Count > 0 && Model != null)
+{
+    <div class="row">
+        @foreach (var item in Model.m2hwebModelList)
+        {
+            if (!String.IsNullOrEmpty(item.CustomDivHTML))
+            {
+                @Html.Raw(item.CustomDivHTML)
+            }
+           
+        }
+  </div>
+
+}

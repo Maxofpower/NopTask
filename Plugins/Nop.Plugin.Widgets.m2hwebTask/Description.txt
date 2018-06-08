@@ -1,0 +1,8 @@
+﻿Group: m2hweb(info@m2hweb.com)
+FriendlyName: Nop Task Widget
+SystemName: Widgets.m2hwebTask
+Version: 1.00
+SupportedVersions: 3.90
+Author: Mohammad Hasan Hosseini
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.m2hwebTask.dll

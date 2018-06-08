@@ -627,6 +627,10 @@
     <Content Include="Content\samples\product_WomenTShirt.jpg" />
     <Content Include="Content\samples\p_attribute_print_1.jpg" />
     <Content Include="Content\samples\p_attribute_print_2.jpg" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Description.txt" />
+    <Content Include="Plugins\Widgets.m2hwebTask\logo.jpg" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Nop.Plugin.Widgets.m2hwebTask.dll" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Nop.Plugin.Widgets.m2hwebTask.pdb" />
     <Content Include="Scripts\fineuploader\edit.gif" />
     <Content Include="Scripts\fineuploader\fineuploader-4.2.2.css" />
     <Content Include="Scripts\fineuploader\fineuploader-4.2.2.min.css" />
@@ -641,6 +645,13 @@
     <Content Include="Content\samples\product_IfYouWait_1.zip" />
     <Content Include="Content\samples\product_NightVision_1.zip" />
     <Content Include="Content\samples\product_ScienceAndFaith_1.zip" />
+    <Content Include="Plugins\Widgets.m2hwebTask\web.config" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Views\WidgetsM2hweb\Configure.cshtml" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Views\WidgetsM2hweb\Create.cshtml" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Views\WidgetsM2hweb\Manage.cshtml" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Views\WidgetsM2hweb\PublicInfo.cshtml" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Views\WidgetsM2hweb\Update.cshtml" />
+    <Content Include="Plugins\Widgets.m2hwebTask\Views\WidgetsM2hweb\_CreateOrUpdate.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\fineuploader\iframe.xss.response-4.2.2.js" />
     <Content Include="Scripts\fineuploader\jquery.fineuploader-4.2.2.js" />

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DFA27D5-2997-43DA-82DA-511F9F865390}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nop.Plugin.Widgets</RootNamespace>
+    <AssemblyName>Nop.Plugin.Widgets.m2hwebTask</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Presentation\Nop.Web\Plugins\Widgets.m2hwebTask\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>M:\Hiland\97.03.15 Task\nopCommerce-release-3.90-bug-fixes\src\packages\Autofac.4.4.0\lib\net45\Autofac.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>M:\Hiland\97.03.15 Task\nopCommerce-release-3.90-bug-fixes\src\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Nop.Core">
+      <HintPath>M:\Hiland\97.03.15 Task\nopCommerce-release-3.90-bug-fixes\src\Libraries\Nop.Core\bin\Debug\Nop.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Nop.Data">
+      <HintPath>M:\Hiland\97.03.15 Task\nopCommerce-release-3.90-bug-fixes\src\Libraries\Nop.Data\bin\Debug\Nop.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Nop.Services">
+      <HintPath>M:\Hiland\97.03.15 Task\nopCommerce-release-3.90-bug-fixes\src\Libraries\Nop.Services\bin\Debug\Nop.Services.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Nop.Web.Framework">
+      <HintPath>M:\Hiland\97.03.15 Task\nopCommerce-release-3.90-bug-fixes\src\Presentation\Nop.Web.Framework\bin\Debug\Nop.Web.Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>M:\Hiland\97.03.15 Task\nopCommerce-release-3.90-bug-fixes\src\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="m2hweb\Infrastructure\DependencyRegistrar.cs" />
+    <Compile Include="m2hwebTask\Controllers\WidgetsM2hwebController.cs" />
+    <Compile Include="m2hwebTask\Data\m2hwebHtmlRecordMap.cs" />
+    <Compile Include="m2hwebTask\Data\m2hwebHtmlRecordObjectContext.cs" />
+    <Compile Include="m2hwebTask\Domain\m2hwebRecord.cs" />
+    <Compile Include="m2hwebTask\Models\PublicInfoModel.cs" />
+    <Compile Include="m2hwebTask\Models\m2hwebModel.cs" />
+    <Compile Include="m2hwebTask\m2hwebPlugin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\WidgetsM2hweb\Configure.cshtml" />
+    <None Include="Views\WidgetsM2hweb\Create.cshtml" />
+    <None Include="Views\WidgetsM2hweb\Manage.cshtml" />
+    <None Include="Views\WidgetsM2hweb\PublicInfo.cshtml" />
+    <None Include="Views\WidgetsM2hweb\Update.cshtml" />
+    <None Include="Views\WidgetsM2hweb\_CreateOrUpdate.cshtml" />
+    <None Include="web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Description.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

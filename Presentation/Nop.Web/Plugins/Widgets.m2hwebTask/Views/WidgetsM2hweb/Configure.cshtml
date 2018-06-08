@@ -1,0 +1,13 @@
+﻿@{
+
+    Layout = "_AdminLayout.cshtml";
+} 
+<div class="section-header">
+    <div class="content-header clearfix">
+        <h1 class="pull-left">
+            @T("Admin.ContentManagement.Widgets.Configure") -  @T("Admin.ContentManagement.Widgets.UnlimitedHtml")  <small><i class="fa fa-arrow-circle-left"></i>@Html.ActionLink("(" + T("Admin.ContentManagement.Widgets.BackToList") + ")", "List", "Widget", new { area = "Admin" }, null)</small>
+        </h1>
+        <div class="pull-right"></div>
+    </div>
+</div>
+@Html.Action("Manage", "WidgetsM2hweb")
